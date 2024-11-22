@@ -18,4 +18,7 @@ interface Dao {
     fun update(note: Note)
     @Query("Select * from notesTable")
     fun getAllNotes():LiveData<List<Note>>
+
+    @Query("Select * from notesTable")
+    fun getAllNotesList():List<Note>
 }

@@ -14,4 +14,6 @@ class Repo(private val dao: Dao) {
         dao.update(note)
     }
     fun getAllNotes()=dao.getAllNotes()
+
+    fun getAllNotesList()=dao.getAllNotesList()
 }

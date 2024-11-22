@@ -11,6 +11,11 @@ class NotesViewModel(
 ): ViewModel() {
     fun getAllNotes()=repo.getAllNotes()
 
+    fun getAllNotesList(){
+        viewModelScope.launch(Dispatchers.IO){
+            repo.getAllNotesList()        }
+    }
+
     fun insert(note: Note){
         viewModelScope.launch(Dispatchers.IO){
             repo.insert(note)
